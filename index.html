@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/app.css" />
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.20/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.20/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.20/dist/js/uikit-icons.min.js"></script>
+    <script src="./js/game.js"></script>
+    <title>Happy Message Generator</title>
+</head>
+<body>
+    <header id="game-header" class="uk-padding-remove">
+        <div class="uk-container uk-light">
+            <div data-uk-grid class="uk-position-center">
+                <div class="uk-width-1-1 uk-text-center">
+                    <h1>Happy Message Generator</h1>
+                </div>
+                <div class="uk-width-1-1 uk-text-center button-section">
+                    <!-- Buntton to start the game -->
+                    <button id="start-game" class="uk-button uk-button-large uk-button-danger" onclick="startGame()"> Click Here to Start</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="game-screen" class="uk-section uk-hidden">
+        <div class="uk-container">
+            <div data-uk-grid>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
