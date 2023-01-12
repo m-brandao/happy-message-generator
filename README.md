@@ -8,6 +8,6 @@ This project comes in the course of a Codecademy project.
 2. Style all the page
 3. Animate de project
 4. For the future
-    - [ ] Dark / Light Mode
+    - [x] Dark / Light Mode
     - [ ] Let people share the messages
-    - [ ] Loading Screen 
+    - [x] Loading Screen 
