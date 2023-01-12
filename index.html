@@ -14,6 +14,10 @@
     <title>Happy Message Generator</title>
 </head>
 <body>
+
+    <!-- Pre Loader -->
+    <div id="preloader" class="uk-text-center" uk-spinner="ratio: 2"></div>
+
     <header id="game-header" class="uk-padding-remove">
         <div class="uk-container uk-light">
             <div data-uk-grid class="uk-position-center">
@@ -21,27 +25,44 @@
                     <h1>Happy Message Generator</h1>
                 </div>
                 <div class="uk-width-1-1 uk-text-center">
-                    <button id="start-game" class="uk-button uk-button-large uk-button-danger" onclick="startGame()"> Click Here to Start</button>
+                    <button id="start-game" class="uk-button uk-button-large uk-button-danger" onclick="initializeGame()">Start</button>
                 </div>
             </div>
         </div>
     </header>
+
     <!-- Add uk-hidden class to game-screen main div -->
-    <section id="game-screen" class="uk-section">
+    <section id="game-screen" class="uk-section uk-hidden">
         <div class="uk-container">
-            <h3 class="uk-text-muted uk-text-center">Click the button to genarate an inspirational message</h3>
-            <div data-uk-grid class="uk-grid-small uk-flex-center">
-                <div class="uk-width-1-1">
-                    <div class="uk-card uk-card-secondary uk-card-body">
+            <div data-uk-grid class="uk-grid-small uk-grid-row-large">
+                <div class="uk-width-1-1 uk-text-center">
+                    <button id="start-game-button" class="uk-button uk-button-large uk-button-primary uk-text-center" onclick="startGame()">Generate Happiness<span uk-icon="refresh"></span></button>
+                    <p class="uk-text-muted">Click the button to genarate an inspirational message</p>
+                </div>
+                <div id="blockquote-group" class="uk-width-1-1">
+                    <div class="uk-card uk-card-default uk-card-body">
                         <blockquote cite="#">
-                            <p class="uk-margin-small-bottom">The blockquote element represents content that is quoted from another source,
-                                optionally with a citation which must be within a footer or cite element.</p>
-                            <footer>The genius that made this app</footer>
+                            <p id="quote-content" class="uk-margin-small-bottom">The message will appear here...</p>
+                            <footer id="quote-author"></footer>
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <footer id="footer" class="uk-section uk-section-small section-black uk-light uk-hidden">
+        <div class="uk-container">
+            <div class="uk-text-center">
+                <h3 class="uk-margin-remove-bottom">@2023 - Miguel Brandão</h3>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const loader = document.getElementById('preloader');
+
+        window.addEventListener('load', function(){
+            loader.style.display = "none";
+        });
+    </script>
 </body>
 </html>

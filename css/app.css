@@ -1,17 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
+    --clr-black: hsl(0, 0%, 15%);
     --clr-white: hsl(0, 0%, 97%);
     --primary-blue: cornflowerblue;
+    --lighter-blue: hsl(219, 79%, 90%);
 }
 
 * {
     font-family: 'Monteserrat',Arial, Helvetica, sans-serif;
 }
 
+#preloader {
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#preloader svg {
+    margin-top: 50vh;
+}
+
 
 /* UIKIT ELEMENTS */
-.uk-button { border-radius: 30px !important; }
+.uk-button { 
+    border-radius: 30px !important; 
+}
+
+.uk-card-default { 
+    background-color: var(--lighter-blue) !important; 
+    border: 3px solid var(--primary-blue); 
+    border-left-width: 10px; 
+}
+#start-game-button { 
+    box-shadow: 2px 5px 0 hsl(210deg 87% 30%); 
+}
+
+#start-game-button:is(:active) { 
+    box-shadow: none; 
+}
+
+
+/* SECTION STYLES */
+.section-black { background-color: var(--clr-black); }
+
+
+/* CUSTOM STYLES */
 
 #start-game{
     transition: opacity 2s;
@@ -33,3 +69,4 @@ header h1 {
     font-weight: 700;
     text-shadow: 5px 5px #558ABB;
 }
+
